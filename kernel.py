@@ -156,7 +156,7 @@ class GPPKernel(MetaKernel):
       case "octave": result = self._exec_octave(code)
       case "puml": result = self._exec_puml(code)
       case "c++": result = self._exec_gpp(code)
-      case -: result = self._exec_octave(code)
+      case _: result = self._exec_octave(code)
 
     self._cellcontents = ""
 
