@@ -155,7 +155,8 @@ class GPPKernel(MetaKernel):
       case "ngspice": result = self._exec_ngspice(code)
       case "octave": result = self._exec_octave(code)
       case "puml": result = self._exec_puml(code)
-      case _: result = self._exec_gpp(code)
+      case "c++": result = self._exec_gpp(code)
+      case -: result = self._exec_octave(code)
 
     self._cellcontents = ""
 
